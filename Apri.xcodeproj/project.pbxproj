@@ -13,6 +13,7 @@
 		2EBA174C26876A8600CE7349 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBA174B26876A8600CE7349 /* Preview Assets.xcassets */; };
 		2EBA175726876A8700CE7349 /* ApriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA175626876A8700CE7349 /* ApriTests.swift */; };
 		2EBA176226876A8700CE7349 /* ApriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA176126876A8700CE7349 /* ApriUITests.swift */; };
+		4DF301A62687D82800B8F184 /* ReceiptImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF301A52687D82800B8F184 /* ReceiptImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		2EBA175D26876A8700CE7349 /* ApriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBA176126876A8700CE7349 /* ApriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApriUITests.swift; sourceTree = "<group>"; };
 		2EBA176326876A8700CE7349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DF301A52687D82800B8F184 /* ReceiptImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				2EBA174426876A8400CE7349 /* ApriApp.swift */,
 				2EBA174626876A8400CE7349 /* ContentView.swift */,
+				4DF301A52687D82800B8F184 /* ReceiptImage.swift */,
 				2EBA174826876A8600CE7349 /* Assets.xcassets */,
 				2EBA174D26876A8600CE7349 /* Info.plist */,
 				2EBA174A26876A8600CE7349 /* Preview Content */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF301A62687D82800B8F184 /* ReceiptImage.swift in Sources */,
 				2EBA174726876A8400CE7349 /* ContentView.swift in Sources */,
 				2EBA174526876A8400CE7349 /* ApriApp.swift in Sources */,
 			);
