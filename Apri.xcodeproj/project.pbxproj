@@ -14,6 +14,7 @@
 		2EBA175726876A8700CE7349 /* ApriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA175626876A8700CE7349 /* ApriTests.swift */; };
 		2EBA176226876A8700CE7349 /* ApriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBA176126876A8700CE7349 /* ApriUITests.swift */; };
 		4DF301A62687D82800B8F184 /* ReceiptImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF301A52687D82800B8F184 /* ReceiptImage.swift */; };
+		4DF301A82687F21200B8F184 /* MarketingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF301A72687F21200B8F184 /* MarketingCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2EBA176126876A8700CE7349 /* ApriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApriUITests.swift; sourceTree = "<group>"; };
 		2EBA176326876A8700CE7349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DF301A52687D82800B8F184 /* ReceiptImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptImage.swift; sourceTree = "<group>"; };
+		4DF301A72687F21200B8F184 /* MarketingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				2EBA174426876A8400CE7349 /* ApriApp.swift */,
 				2EBA174626876A8400CE7349 /* ContentView.swift */,
+				4DF301A72687F21200B8F184 /* MarketingCard.swift */,
 				4DF301A52687D82800B8F184 /* ReceiptImage.swift */,
 				2EBA174826876A8600CE7349 /* Assets.xcassets */,
 				2EBA174D26876A8600CE7349 /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				4DF301A62687D82800B8F184 /* ReceiptImage.swift in Sources */,
 				2EBA174726876A8400CE7349 /* ContentView.swift in Sources */,
+				4DF301A82687F21200B8F184 /* MarketingCard.swift in Sources */,
 				2EBA174526876A8400CE7349 /* ApriApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
