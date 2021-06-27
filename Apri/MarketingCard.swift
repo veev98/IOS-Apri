@@ -1,5 +1,6 @@
+
 //
-//  ContentView.swift
+//  MarketingCard.swift
 //  apri
 //
 //  Created by Joanna Aloor on 26/06/2021.
@@ -7,7 +8,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MarketingCard: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     var body: some View {
         
         NavigationView {
@@ -29,18 +32,27 @@ struct ContentView: View {
                             .frame(width: 340, height: 198.6)
                             .offset(x: 60)
                         
-                        NavigationLink(destination: MarketingCard()){
-                            
-                            Image(uiImage: #imageLiteral(resourceName: "Marketing_card"))
+//                        NavigationLink(destination: ContentView()){
+//
+//                            Image(uiImage: #imageLiteral(resourceName: "Primary_card"))
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fill)
+//                                .frame(width: 340, height: 198.6)
+//                                .offset(x: 30)
+//
+//                        }
+                        
+                        Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Image(uiImage: #imageLiteral(resourceName: "Primary_card"))
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 340, height: 198.6)
                                 .offset(x: 30)
-                                .navigationBarTitle("")
-                                .navigationBarHidden(true)
                         }
                         
-                        Image(uiImage: #imageLiteral(resourceName: "Primary_card"))
+                        Image(uiImage: #imageLiteral(resourceName: "Marketing_card"))
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 340, height: 198.6)
@@ -118,25 +130,24 @@ struct ContentView: View {
                     
                     //Starbucks
                     HStack {
-                        Image(uiImage: #imageLiteral(resourceName: "starbucks-logo"))
+                        Image(uiImage: #imageLiteral(resourceName: "amazonlogo"))
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 30, height: 25)
-                            .clipped()
                             .offset(x: 20)
                         
-                        Text("Starbucks").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
+                        Text("Amazon").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
                         
                         Text("£").font(.custom("Poppins Regular", size: 10)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1)))
                         Spacer(minLength: 1)
                         //9
-                        Text("7").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
+                        Text("92").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
                         Spacer(minLength: 0)
                         
                         //.99
-                        Text(".99").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
+                        Text(".79").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
                         
                         Spacer(minLength: 57)
                         
@@ -159,26 +170,6 @@ struct ContentView: View {
                         }
                         
                         
-                        //                Button(action: {
-                        //
-                        //                }, label: {
-                        //                    ZStack {
-                        //                        Text("Receipt").font(.custom("Poppins Regular", size: 12)).foregroundColor(Color(#colorLiteral(red: 0.67, green: 0.7, blue: 0.75, alpha: 1))).tracking(-0.24)
-                        //                            .frame(maxWidth: 70, alignment: .leading)
-                        //                            .background(RoundedRectangle(cornerRadius: 11)
-                        //                                            .fill(Color(#colorLiteral(red: 0.9291666746139526, green: 0.9291666746139526, blue: 0.9291666746139526, alpha: 1)))
-                        //                                        .frame(width: 83, height: 28))
-                        //
-                        //                        Image(uiImage: #imageLiteral(resourceName: "Rectangle 31"))
-                        //                            .resizable()
-                        //                            .aspectRatio(contentMode: .fill)
-                        //                            .frame(width: 24, height: 20)
-                        //                            .clipped()
-                        //                            .offset(x: 20)
-                        //
-                        //                    }
-                        //                })
-                        
                         Spacer(minLength:15)
                         
                     }
@@ -187,25 +178,24 @@ struct ContentView: View {
                     
                     HStack {
                         
-                        Image(uiImage: #imageLiteral(resourceName: "amazonlogo"))
+                        Image(uiImage: #imageLiteral(resourceName: "Group 17"))
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 30, height: 25)
-                            .clipped()
                             .offset(x: 20)
                         
-                        Text("Amazon").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
+                        Text("Web Desig...").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
                         
                         Text("£").font(.custom("Poppins Regular", size: 10)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1)))
                         Spacer(minLength: 1)
                         //9
-                        Text("67").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
+                        Text("350").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
                         Spacer(minLength: 0)
                         
                         //.99
-                        Text(".39").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
+                        Text(".89").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
                         
                         Spacer(minLength: 57)
                         
@@ -303,25 +293,25 @@ struct ContentView: View {
                     //Starbucks
                     HStack {
                         
-                        Image(uiImage: #imageLiteral(resourceName: "kisspng-british-airways-boeing-747-travel-united-kingdom-l-british-airways-logo-www-galleryhip-com-the-hipp-5b77f7b8e3f115.9234931215345888569337"))
+                        Image(uiImage: #imageLiteral(resourceName: "AdobeMarketo"))
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 30, height: 25)
                             .clipped()
                             .offset(x: 20)
                         
-                        Text("BA").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
+                        Text("Mrkto Subscr").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
                         
                         Text("£").font(.custom("Poppins Regular", size: 10)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1)))
                         Spacer(minLength: 1)
                         //9
-                        Text("270").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
+                        Text("99").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
                         Spacer(minLength: 0)
                         
                         //.99
-                        Text(".55").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
+                        Text(".99").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
                         
                         Spacer(minLength: 57)
                         
@@ -354,7 +344,6 @@ struct ContentView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 30, height: 25)
-                            .clipped()
                             .offset(x: 20)
                         
                         Text("Uber").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
@@ -395,25 +384,24 @@ struct ContentView: View {
                     
                     HStack {
                         
-                        Image(uiImage: #imageLiteral(resourceName: "costa-coffee-logo-2FAF17C759-seeklogo.com"))
+                        Image(uiImage: #imageLiteral(resourceName: "Group 17"))
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 30, height: 25)
-                            .clipped()
                             .offset(x: 20)
                         
-                        Text("Costa").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
+                        Text("Techspace").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, 20)
                         
                         Text("£").font(.custom("Poppins Regular", size: 10)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1)))
                         Spacer(minLength: 1)
                         //9
-                        Text("15").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
+                        Text("500").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
                         Spacer(minLength: 0)
                         
                         //.99
-                        Text(".98").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
+                        Text(".00").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
                         
                         Spacer(minLength: 57)
                         
@@ -440,53 +428,8 @@ struct ContentView: View {
                     }
                     
                     
-                    
                     Spacer()
                         .frame(height: 20)
-                    
-                    //                HStack {
-                    //
-                    //                    Image(uiImage: #imageLiteral(resourceName: "oxotowerrestaurant"))
-                    //                        .resizable()
-                    //                        .aspectRatio(contentMode: .fill)
-                    //                        .frame(width: 30, height: 25)
-                    //                        .clipped()
-                    //                        .offset(x: 20)
-                    //
-                    //                    Text("OXO TWR").font(.custom("Poppins Medium", size: 18)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.36)
-                    //                        .frame(maxWidth: .infinity, alignment: .leading)
-                    //                        .padding(.horizontal, 20)
-                    //
-                    //                    Text("£").font(.custom("Poppins Regular", size: 10)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1)))
-                    //                    Spacer(minLength: 1)
-                    //                    //9
-                    //                    Text("82").font(.custom("Poppins Medium", size: 20)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(-0.4)
-                    //                    Spacer(minLength: 0)
-                    //
-                    //                    //.99
-                    //                    Text(".45").font(.custom("Poppins Regular", size: 14)).foregroundColor(Color(#colorLiteral(red: 0.05, green: 0.11, blue: 0.21, alpha: 1))).tracking(0.14)
-                    //
-                    //                    Spacer(minLength: 57)
-                    //
-                    //                    //Receipt
-                    //                    ZStack {
-                    //                        Text("Receipt").font(.custom("Poppins Regular", size: 12)).foregroundColor(Color(#colorLiteral(red: 0.67, green: 0.7, blue: 0.75, alpha: 1))).tracking(-0.24)
-                    //                            .frame(maxWidth: 70, alignment: .leading)
-                    //                            .background(RoundedRectangle(cornerRadius: 11)
-                    //                                            .fill(Color(#colorLiteral(red: 0.9291666746139526, green: 0.9291666746139526, blue: 0.9291666746139526, alpha: 1)))
-                    //                                        .frame(width: 83, height: 28))
-                    //
-                    //                        Image(uiImage: #imageLiteral(resourceName: "Rectangle 31"))
-                    //                            .resizable()
-                    //                            .aspectRatio(contentMode: .fill)
-                    //                            .frame(width: 24, height: 20)
-                    //                            .clipped()
-                    //                            .offset(x: 20)
-                    //
-                    //                    }
-                    //                    Spacer(minLength:15)
-                    //                }
-                    
                     
                 }
                 Spacer()
@@ -520,9 +463,9 @@ struct ContentView: View {
     }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct MarketingCard_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MarketingCard()
     }
 }
 
